@@ -1,4 +1,4 @@
-# 1st-person-overcooked
+# First Person Overcooked Game
 Online co-op Unity game based on the popular game Overcooked made using [Photon](https://www.photonengine.com/pun)
 
 Play it [here](https://letter-of-power.itch.io/1st-person-overcooked) :)
