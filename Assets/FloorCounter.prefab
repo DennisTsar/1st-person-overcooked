@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2999646813025443240}
   - component: {fileID: 2999646813217213727}
   m_Layer: 0
-  m_Name: Counter_1_1
+  m_Name: FloorCounter
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
