@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1697752796196363722}
-  toast: {fileID: 1000011356331470, guid: 00a1a863a89404d46a228ffab189f332, type: 3}
 --- !u!114 &-5144423728688304110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +204,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-4391159476514731785
 MonoBehaviour:
@@ -1487,7 +1486,6 @@ GameObject:
   - component: {fileID: 1697752796196363717}
   - component: {fileID: 1697752796196363722}
   - component: {fileID: 1697752796196363723}
-  - component: {fileID: 725301062446193460}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1560,25 +1558,3 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697752796196363720}
   m_Enabled: 1
---- !u!114 &725301062446193460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697752796196363720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
