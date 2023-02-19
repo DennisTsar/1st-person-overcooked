@@ -11,13 +11,14 @@ public class TimedTask : Interactable
     private bool active;
     public GameObject item;
     private GameObject arrowInstance;
+    public Vector3 itemOffset;
 
 
     public override void OnInteract(GameObject carry, int playerID)
     {
         if (item == null && carry != null && carry.GetComponent<Food>().type == type)
         {
-            GameObject timer = PhotonNetwork.Instantiate(timerPrefab.name, transform.position + Vector3.up * .25f, transform.rotation);
+            GameObject timer = PhotonNetwork.Instantiate(timerPrefab.name, transform.position + Vector3.up * .75f + itemOffset, transform.rotation);
             timer.GetComponent<ProgressBar>().parentName = gameObject.name;
             photonView.RPC("PlaceItem", RpcTarget.All, carry.GetPhotonView().ViewID, playerID);
         }
@@ -34,7 +35,7 @@ public class TimedTask : Interactable
         GameObject player = PhotonView.Find(playerID).gameObject;
         player.GetComponent<PlayerController>().SetCarry(null);
         item = carry;
-        item.transform.position = transform.position + transform.up * 0.25f;
+        item.transform.position = transform.position + itemOffset;
         item.transform.parent = transform;
         active = true;
     }
@@ -55,7 +56,7 @@ public class TimedTask : Interactable
         GameObject dying = item;
         item = PhotonView.Find(itemID).gameObject;
         PhotonNetwork.Destroy(dying);
-        arrowInstance = PhotonNetwork.Instantiate(arrowPrefab.name, transform.position + Vector3.up * .25f, transform.rotation);
+        arrowInstance = PhotonNetwork.Instantiate(arrowPrefab.name, transform.position + Vector3.up * .4f + itemOffset, transform.rotation);
         active = false;
     }
 }

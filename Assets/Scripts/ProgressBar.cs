@@ -30,7 +30,7 @@ public class ProgressBar : MonoBehaviourPunCallbacks
             if (GameObject.Find(parentName) != null && GameObject.Find(parentName).GetComponent<TimedTask>() != null)
             {
                 GameObject item = GameObject.Find(parentName).GetComponent<TimedTask>().item;
-                GameObject i = PhotonNetwork.Instantiate(item.GetComponent<Food>().afterPrepared.name, transform.position + Vector3.up * .25f, transform.rotation);
+                GameObject i = PhotonNetwork.Instantiate(item.GetComponent<Food>().afterPrepared.name, transform.position - Vector3.up * .75f, transform.rotation);
                 GameObject.Find(parentName).GetComponent<TimedTask>().photonView.RPC("OnEnd", RpcTarget.All, i.GetPhotonView().ViewID);
             }
             photonView.RPC("Destroy", RpcTarget.All);

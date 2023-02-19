@@ -17,7 +17,7 @@ public class Counter : Interactable
         {
             photonView.RPC("PlaceItem", RpcTarget.All, carry.GetPhotonView().ViewID, playerID);
         }
-        else if (ob != null && ob.name.StartsWith("Plate3") && carry != null)
+        else if (ob != null && ob.name.StartsWith("Plate") && carry != null)
         {
             photonView.RPC("PlaceOnPlate", RpcTarget.All, carry.GetPhotonView().ViewID, playerID);
         }

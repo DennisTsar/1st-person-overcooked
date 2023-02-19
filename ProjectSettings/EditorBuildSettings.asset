@@ -10,8 +10,8 @@ EditorBuildSettings:
     guid: 623d0f4b424cf784f883400d26fe0a27
   - enabled: 1
     path: Assets/Scenes/Restaurant.unity
-    guid: 586db3d7c62416e4e91f201903178559
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    guid: 81838ae7612c8f641a598483a71d902d
+  - enabled: 1
+    path: Assets/Scenes/RestaurantDev.unity
+    guid: 614665bebb044a648a34d0893cb1f3bb
   m_configObjects: {}
